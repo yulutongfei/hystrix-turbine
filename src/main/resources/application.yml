@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: hystrix-turbine
+
+server:
+  port: 2002
+
+management:
+  port: 2003
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+
+turbine:
+  appConfig: ServiceB
+  clusterNameExpression: "'default'"
